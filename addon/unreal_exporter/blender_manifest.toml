@@ -1,0 +1,28 @@
+schema_version = "1.0.0"
+
+id = "unreal_exporter"
+version = "0.1.0"
+name = "Unreal Export Bridge"
+tagline = "Validated FBX export and import scripts for Unreal Engine 5"
+maintainer = "Peter Gyarmati"
+type = "add-on"
+
+tags = ["Import-Export", "Game Engine", "Pipeline"]
+
+blender_version_min = "5.2.0"
+
+license = ["SPDX:GPL-3.0-or-later"]
+copyright = ["2026 Peter Gyarmati"]
+
+[permissions]
+files = "Write FBX files, manifests, logs and Unreal import scripts"
+
+[build]
+paths_exclude_pattern = [
+  "__pycache__/",
+  "*.pyc",
+  "*.pyo",
+  "/.git/",
+  "/tests/",
+  "*.blend1",
+]

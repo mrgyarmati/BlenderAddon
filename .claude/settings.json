@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/scripts/hooks/run_hook.sh\" \"$CLAUDE_PROJECT_DIR/scripts/hooks/guard_edits.py\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/scripts/hooks/run_hook.sh\" \"$CLAUDE_PROJECT_DIR/scripts/hooks/check_python.py\""
+          }
+        ]
+      }
+    ]
+  }
+}

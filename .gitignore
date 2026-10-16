@@ -1,0 +1,28 @@
+# Build output and disposable test projects
+/build/
+/dist/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# Blender
+*.blend1
+*.blend@
+
+# Unreal (if a test project ever lands outside build/)
+Intermediate/
+Saved/
+DerivedDataCache/
+Binaries/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local Claude Code settings
+.claude/settings.local.json
